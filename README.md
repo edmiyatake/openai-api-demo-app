@@ -1,25 +1,27 @@
-# 🎈 Blank app template
+# Translator 9000
 
-A simple Streamlit app template for you to modify!
+A stylish Streamlit translation app for Spanish and English input, with Mandarin, French, and Japanese output.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Run locally
 
-### How to run it on your own machine
+1. Install the project dependencies:
 
-Prerequisite: install `uv` if you don't already have it.
-
-```
-$ curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-1. Sync the dependencies
-
-   ```
-   $ uv sync
+   ```powershell
+   uv sync
    ```
 
-2. Run the app
+2. Add your OpenAI key. Create `.streamlit/secrets.toml` with:
 
+   ```toml
+   OPENAI_API_KEY = "your-api-key"
    ```
-   $ uv run streamlit run streamlit_app.py
+
+   Alternatively, set an `OPENAI_API_KEY` environment variable.
+
+3. Start the app:
+
+   ```powershell
+   uv run streamlit run streamlit_app.py
    ```
+
+The app uses the `gpt-3.5-turbo-0125` model from the original example. Change the `model` value in `streamlit_app.py` if your account uses a different model.
